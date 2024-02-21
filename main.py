@@ -1,5 +1,6 @@
 # Import modules
 import random
+import os
 from hangman_words import word_list
 from hangman_art import logo, stages
 
@@ -30,6 +31,8 @@ while not end_of_game:
     # e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
     # For an incorrect guess decrement the lives
     guess = input("Guess a letter: ").lower()
+    # clear the screen
+    os.system("cls")
     if guess in guesses:
         print("\nYou have already guessed this letter. Try again.\n")
 
